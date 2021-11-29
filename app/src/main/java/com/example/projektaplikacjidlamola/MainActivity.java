@@ -1,8 +1,14 @@
 package com.example.projektaplikacjidlamola;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.SearchView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,5 +16,50 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String[] name = {"XD", "XDDDD","JANEK"};
+
+        ImageView searchImage = (ImageView) findViewById(R.id.searchImage);
+        ImageView favouriteImage = (ImageView) findViewById(R.id.favouriteImage);
+        ImageView listImage = (ImageView) findViewById(R.id.listImage);
+
+        searchImage.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                switch (event.getAction()){
+                    case MotionEvent.ACTION_DOWN: {
+                        setContentView(R.layout.search_layout);
+                        SearchView search = (SearchView) findViewById(R.id.searchView);
+                        ListView listAllBooks = (ListView) findViewById(R.id.listAllBooks);
+                        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1,name);
+                        listAllBooks.setAdapter(arrayAdapter);
+                        search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                            @Override
+                            public boolean onQueryTextSubmit(String query) {
+                                System.out.println("XD!");
+                                return false;
+                            }
+
+                            @Override
+                            public boolean onQueryTextChange(String newText) {
+                                arrayAdapter.getFilter().filter(newText);
+                                return false;
+                            }
+                        });
+                        System.out.println(search);
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        break;
+                    }
+                    case MotionEvent.ACTION_CANCEL: {
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
     }
 }
