@@ -1,5 +1,6 @@
 package com.example.projektaplikacjidlamola;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -12,12 +13,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String USER_AGENT = "Mozilla/5.0";
+
+    private static final String GET_URL = "https://www.googleapis.com/books/v1/volumes?q=intitle:Metro";
+
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] name = {"XD", "XDDDD","JANEK"};
+        String[] name = {"TEST1", "2TEST","T3ST"};
 
         ImageView searchImage = (ImageView) findViewById(R.id.searchImage);
         ImageView favouriteImage = (ImageView) findViewById(R.id.favouriteImage);
@@ -36,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
                         listAllBooks.setAdapter(arrayAdapter);
                         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                             @Override
-                            public boolean onQueryTextSubmit(String query) {
+                            public boolean onQueryTextSubmit(String text) {
                                 System.out.println("XD!");
+                                System.out.println(text);
                                 return false;
                             }
 
@@ -47,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                                 return false;
                             }
                         });
+
                         System.out.println(search);
                         break;
                     }
