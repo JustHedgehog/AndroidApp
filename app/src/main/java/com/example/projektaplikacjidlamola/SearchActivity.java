@@ -124,7 +124,6 @@ public class SearchActivity extends AppCompatActivity{
         listAllBooks.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(this, BookActivity.class);
             intent.putExtra("Book", (Serializable) arrayAdapter.getItem(position));
-            intent.putExtra("Book", (Serializable) arrayAdapter.getItem(position));
             startActivity(intent);
         });
 

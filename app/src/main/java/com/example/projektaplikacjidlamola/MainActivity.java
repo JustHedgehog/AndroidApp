@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         favouriteImage = (ImageView) findViewById(R.id.favouriteImage);
         listImage = (ImageView) findViewById(R.id.listImage);
         setListeners();
+        getApplicationContext().deleteFile("config.txt");
 
     }
 
