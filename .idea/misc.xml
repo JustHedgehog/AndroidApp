@@ -4,16 +4,24 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout-land/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout-land/book_layout.xml" value="0.22354497354497355" />
+        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout-land/book_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout-land/in_reading_layout.xml" value="0.22354497354497355" />
         <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout-land/like_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout-land/read_layout.xml" value="0.18386243386243387" />
         <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout-land/search_layout.xml" value="0.22" />
+        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout-land/state_list_layout.xml" value="0.18" />
+        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout-land/to_read_layout.xml" value="0.23368606701940034" />
         <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/activity_main.xml" value="0.2740036231884058" />
         <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/activity_search.xml" value="0.25" />
-        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/book_layout.xml" value="0.2640625" />
+        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/book_layout.xml" value="0.33" />
         <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/fragment_first.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/fragment_second.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/in_reading_layout.xml" value="0.2640625" />
         <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/like_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/read_layout.xml" value="0.2" />
         <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/search_layout.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/state_list_layout.xml" value="0.2640625" />
+        <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/layout/to_read_layout.xml" value="0.2640625" />
         <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Seba3/AndroidStudioProjects/ProjektAplikacjiDlaMola/app/src/main/res/xml/network_security_config.xml" value="0.2640625" />
       </map>

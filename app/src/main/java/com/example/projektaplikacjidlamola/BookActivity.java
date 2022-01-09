@@ -47,6 +47,7 @@ public class BookActivity extends AppCompatActivity {
 
         CheckBox checkBoxBookRead = (CheckBox) findViewById(R.id.checkBoxBookRead);
         CheckBox checkBoxBookToRead = (CheckBox) findViewById(R.id.checkBoxBookToRead);
+        CheckBox checkBoxBookInReading = (CheckBox) findViewById(R.id.checkBoxBookInReading);
         CheckBox checkBoxBookLike = (CheckBox) findViewById(R.id.checkBoxBookLike);
 
         //Scrollowanie
@@ -69,7 +70,8 @@ public class BookActivity extends AppCompatActivity {
                     Boolean read = tempJsonObject.get("read").getAsBoolean();
                     Boolean toRead = tempJsonObject.get("toRead").getAsBoolean();
                     Boolean like = tempJsonObject.get("like").getAsBoolean();
-                    listBooksToSave.add(new Book(tempAuthors, tempTitle, tempDescription, read, toRead,like));
+                    Boolean inReading = tempJsonObject.get("inReading").getAsBoolean();
+                    listBooksToSave.add(new Book(tempAuthors, tempTitle, tempDescription, read, toRead,like,inReading));
                 }catch (Exception e){
                     System.out.println(e.getMessage());
                 }
@@ -84,9 +86,11 @@ public class BookActivity extends AppCompatActivity {
                 checkBoxBookRead.setChecked(temp.getRead());
                 checkBoxBookToRead.setChecked(temp.getToRead());
                 checkBoxBookLike.setChecked(temp.getLike());
+                checkBoxBookInReading.setChecked(temp.getInReading());
                 selectedBook.setLike(temp.getLike());
                 selectedBook.setRead(temp.getRead());
                 selectedBook.setToRead(temp.getToRead());
+                selectedBook.setInReading(temp.getInReading());
                 listBooksToSave.remove(temp);
                 break;
             }
@@ -100,17 +104,19 @@ public class BookActivity extends AppCompatActivity {
         //Listeners
         setListeners(checkBoxBookRead,selectedBook,"read");
         setListeners(checkBoxBookToRead,selectedBook,"toRead");
+        setListeners(checkBoxBookInReading,selectedBook, "inReading");
         setListeners(checkBoxBookLike,selectedBook,"like");
 
     }
 
     @Override
     protected void onPause() {
-        if(selectedBook.getLike() == true || selectedBook.getRead() == true || selectedBook.getToRead() == true)
+        if(selectedBook.getLike() == true || selectedBook.getRead() == true || selectedBook.getToRead() == true || selectedBook.getInReading() == true)
             listBooksToSave.add(selectedBook);
 
         String jsonString = gson.toJson(listBooksToSave);
         getApplicationContext().deleteFile("config.txt");
+        System.out.println(jsonString);
         localSaveAndWrite.writeToFile(jsonString, getApplicationContext());
         super.onPause();
     }
@@ -139,6 +145,10 @@ public class BookActivity extends AppCompatActivity {
                         selectedBook.setLike(true);
                         break;
                     }
+                    case "inReading":{
+                        selectedBook.setInReading(true);
+                        break;
+                    }
                 }
             }else
             {
@@ -153,6 +163,10 @@ public class BookActivity extends AppCompatActivity {
                     }
                     case "like":{
                         selectedBook.setLike(false);
+                        break;
+                    }
+                    case "inReading":{
+                        selectedBook.setInReading(false);
                         break;
                     }
                 }

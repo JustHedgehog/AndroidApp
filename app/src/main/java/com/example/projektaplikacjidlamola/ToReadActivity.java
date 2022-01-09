@@ -16,27 +16,30 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LikeActivity extends AppCompatActivity {
-    static final int PICK_CONTACT_REQUEST = 0;
-    LocalSaveAndWrite localSaveAndWrite = new LocalSaveAndWrite();
-    ListView listAllBooks;
+public class ToReadActivity extends AppCompatActivity {
+
+    ListView listToRead;
     List<Book> listBooksToShow = new ArrayList<Book>();
     ArrayAdapter<Book> arrayAdapter;
+    LocalSaveAndWrite localSaveAndWrite = new LocalSaveAndWrite();
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.like_layout);
-        listAllBooks = (ListView) findViewById(R.id.listFavouriteBooks);
+        setContentView(R.layout.to_read_layout);
+
+        listToRead = (ListView) findViewById(R.id.toReadList);
+
         arrayAdapter = new ArrayAdapter<Book>(getApplicationContext(), android.R.layout.simple_list_item_1, listBooksToShow);
-        listAllBooks.setAdapter(arrayAdapter);
+        listToRead.setAdapter(arrayAdapter);
 
         setData();
 
-        listAllBooks.setOnItemClickListener((parent, view, position, id) -> {
+        listToRead.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(this, BookActivity.class);
             intent.putExtra("Book", (Serializable) arrayAdapter.getItem(position));
             startActivity(intent);
         });
-
     }
 
     private void setData() {
@@ -55,7 +58,7 @@ public class LikeActivity extends AppCompatActivity {
                     Boolean toRead = tempJsonObject.get("toRead").getAsBoolean();
                     Boolean like = tempJsonObject.get("like").getAsBoolean();
                     Boolean inReading = tempJsonObject.get("inReading").getAsBoolean();
-                    if(like == true)
+                    if(toRead == true)
                         listBooksToShow.add(new Book(tempAuthors, tempTitle, tempDescription, read, toRead, like, inReading));
                 } catch (Exception e) {
                     System.out.println(e.getMessage());

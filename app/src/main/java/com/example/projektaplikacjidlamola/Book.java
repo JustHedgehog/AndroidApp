@@ -9,13 +9,14 @@ public class Book implements Serializable {
         this.description = description;
     }
 
-    public Book(String authors, String title, String description, Boolean read, Boolean toRead , Boolean like){
+    public Book(String authors, String title, String description, Boolean read, Boolean toRead , Boolean like, Boolean inReading){
         this.authors = authors;
         this.title = title;
         this.description = description;
         this.read = read;
         this.toRead = toRead;
         this.like = like;
+        this.inReading = inReading;
     }
 
     public String getAuthors() {
@@ -70,11 +71,20 @@ public class Book implements Serializable {
         this.like = like;
     }
 
+    public Boolean getInReading() {
+        return inReading;
+    }
+
+    public void setInReading(Boolean inReading) {
+        this.inReading = inReading;
+    }
+
     String authors;
     String title;
     String description;
     Boolean read = false;
     Boolean toRead = false;
+    Boolean inReading = false;
     Boolean like = false;
 
 }

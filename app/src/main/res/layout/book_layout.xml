@@ -16,17 +16,6 @@
         app:layout_constraintStart_toEndOf="@+id/textViewBookTitle"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxBookRead" />
 
-    <CheckBox
-        android:id="@+id/checkBoxBookLike"
-        android:layout_width="159dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginEnd="20dp"
-        android:text="Ulubione"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewBookAuthors"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxBookToRead" />
-
     <TextView
         android:id="@+id/textViewBookTitle"
         android:layout_width="175dp"
@@ -48,18 +37,19 @@
 
     <TextView
         android:id="@+id/textViewBookDescription"
-        android:layout_width="367dp"
-        android:layout_height="593dp"
+        android:layout_width="365dp"
+        android:layout_height="560dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="4dp"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewBookAuthors"
-        app:layout_constraintVertical_bias="0.0"
-        android:scrollbars = "vertical"/>
+        app:layout_constraintVertical_bias="0.6" />
 
     <CheckBox
         android:id="@+id/checkBoxBookRead"
@@ -72,4 +62,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewBookTitle"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBookLike"
+        android:layout_width="159dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="20dp"
+        android:text="Ulubione"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBookAuthors"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxBookInReading" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBookInReading"
+        android:layout_width="159dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="20dp"
+        android:text="W trakcie czytania"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBookAuthors"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxBookToRead" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

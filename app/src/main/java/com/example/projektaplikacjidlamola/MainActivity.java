@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         favouriteImage = (ImageView) findViewById(R.id.favouriteImage);
         listImage = (ImageView) findViewById(R.id.listImage);
         setListeners();
-        getApplicationContext().deleteFile("config.txt");
+//        getApplicationContext().deleteFile("config.txt");
 
     }
 
@@ -35,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, LikeActivity.class);
             startActivity(intent);
         });
-
+        listImage.setOnClickListener(v -> {
+            Intent intent = new Intent(this, StateListActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override

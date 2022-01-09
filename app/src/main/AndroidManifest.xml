@@ -16,6 +16,18 @@
             android:name=".SearchActivity"
             android:exported="false"/>
         <activity
+            android:name=".ReadActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".InReadingActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ToReadActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".StateListActivity"
+            android:exported="false"/>
+        <activity
             android:name=".LikeActivity"
             android:exported="false"/>
         <activity
