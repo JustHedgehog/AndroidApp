@@ -42,7 +42,7 @@ public class SearchActivity extends AppCompatActivity{
 
         setContentView(R.layout.search_layout);
         SearchView search = (SearchView) findViewById(R.id.searchView);
-        ListView listAllBooks = (ListView) findViewById(R.id.listAllBooks);
+        ListView listAllBooks = (ListView) findViewById(R.id.listFavouriteBooks);
         ArrayAdapter<Book> arrayAdapter = new ArrayAdapter<Book>(getApplicationContext(), android.R.layout.simple_list_item_1, bookArray);
         listAllBooks.setAdapter(arrayAdapter);
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

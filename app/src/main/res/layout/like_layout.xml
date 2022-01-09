@@ -5,21 +5,19 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="fill_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:queryHint="Search Here"
+
+    <ListView
+        android:id="@+id/listFavouriteBooks"
+        android:layout_width="359dp"
+        android:layout_height="692dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/listFavouriteBooks"
-        android:layout_width="757dp"
-        android:layout_height="366dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

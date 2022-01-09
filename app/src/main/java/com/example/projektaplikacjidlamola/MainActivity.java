@@ -31,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
         });
+        favouriteImage.setOnClickListener(v -> {
+            Intent intent = new Intent(this, LikeActivity.class);
+            startActivity(intent);
+        });
 
     }
 

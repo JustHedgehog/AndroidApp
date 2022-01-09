@@ -16,6 +16,9 @@
             android:name=".SearchActivity"
             android:exported="false"/>
         <activity
+            android:name=".LikeActivity"
+            android:exported="false"/>
+        <activity
             android:name=".BookActivity"
             android:exported="false"/>
         <activity
